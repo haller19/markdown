@@ -1,6 +1,6 @@
 <template>
     <div id="home">
-        <h1>{{msg}}</h1>
+        <h1>{{ msg }}</h1>
         <!-- @clickはHTMLのonClickのようなもの　Vue.jsでは呼び出す関数を記載する -->
         <button @click="googleLogin">Googleアカウントでログインするよ</button>
     </div>

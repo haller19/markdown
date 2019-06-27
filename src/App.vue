@@ -18,14 +18,16 @@ export default {
       msg: 'Welcome to Vue.js App'//変数は引き継がれない
     };
   },
-  create: function() {
+  mounted: function() {
     // Vie.jsがこのコンポーネントを作成したタイミングで実行
     firebase.auth().onAuthStateChanged( user => {
       console.log(user);
       if (user) {//user情報が格納されたらisLoginのtrue/falseを付与
         this.isLogin = true;
+        this.userData = user;
       }else{
         this.isLogin = false;
+        this.userData = user;
       };
     });
   },
