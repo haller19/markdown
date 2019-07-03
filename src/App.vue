@@ -15,6 +15,7 @@ export default {
   data () {
     return {
       isLogin:false,
+      user:null,
       msg: 'Welcome to Vue.js App'//変数は引き継がれない
     };
   },
@@ -27,7 +28,7 @@ export default {
         this.userData = user;
       }else{
         this.isLogin = false;
-        this.userData = user;
+        this.userData = null;
       };
     });
   },
